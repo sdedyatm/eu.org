@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/styles.css">
+    <meta name="description" content="Aplikasi Device Hmsi">
+  <meta name="keywords" content="sdedyatm,atm,hmsi,hino">
+  <meta name="author" content="sdedyatm">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <title>My PWA</title>
 
   <script>
@@ -40,32 +46,1140 @@
 <body>
   <style>
     body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-}
+      background-image: url(https://i.pinimg.com/736x/06/3f/b5/063fb5a7e9be4b524b842a0df1837d60.jpg);
+      background-size: 113%;
+      //background-size:cover;            
+      border: 9px solid #454443;
+      /* Coklat muda */
+      box-shadow: #9e8667;
+      /* Shadow border yang disesuaikan */
+      border-radius: 17px;
+      /* Menambahkan sudut melengkung */
+      padding: 0px;
+      /* Ruang di dalam border */
+    }
 
-#content {
-    text-align: center;
-    padding: 20px;
-}
+    .fg:hover {
+      filter: brightness(1.2);
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+    }
 
-h1 {
-    color: #333;
-}
+    @keyframes gradient-move {
+      0% {
+        background-position: 0% 50%;
+      }
 
-p {
-    color: #666;
-}
+      100% {
+        background-position: 100% 50%;
+      }
+    }
 
+    .bg,
+    .fg {
+      background-size: 200% 200%;
+      animation: gradient-move 3s infinite alternate;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #ffb338;
+      --light-shadow: #77571d;
+      --dark-shadow: #3e2904;
+    }
+
+    .wrapper {
+      background: transparent;
+      display: grid;
+      grid-template-areas: 'overlap';
+      place-content: center;
+      text-transform: uppercase;
+      height: 20vh;
+      max-width: 450px;
+    }
+
+    .wrapper>div {
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: #363833;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3em, 4vw, 10rem);
+      grid-area: overlap;
+      letter-spacing: 1px;
+      -webkit-text-stroke: 4px transparent;
+    }
+
+    div.bg {
+      background-image: repeating-linear-gradient(105deg,
+          var(--gold) 0%,
+          var(--dark-shadow) 5%,
+          var(--gold) 12%);
+      color: transparent;
+      filter: drop-shadow(5px 15px 15px black);
+      transform: scaleY(1.05);
+      transform-origin: top;
+    }
+
+    div.fg {
+      background-image: repeating-linear-gradient(5deg,
+          var(--gold) 0%,
+          var(--light-shadow) 23%,
+          var(--gold) 31%);
+      color: #1e2127;
+      transform: scale(1);
+    }
+
+    .frame {
+      box-shadow: 10px 10px 15px rgb(193, 182, 182), 10px 10px 15px #;
+      padding: 20px;
+      max-width: 480px;
+      height: 200px;
+      margin: 40px auto;
+      margin-top: 20px;
+      border-radius: 15px;
+      background-color: transparent;
+    }
+
+    .card-social {
+      margin-top: 15px;
+    }
+
+    .card-social a {
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      margin: 20px;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      font-size: 20px;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 300ms;
+    }
+
+    .card-social .xcom {
+      background: linear-gradient(35deg, #1DA1F2, #1DA1F2);
+      box-shadow: 0 2px 20px rgba(29, 161, 242, 0.7);
+    }
+
+    .card-social .youtube {
+      background: linear-gradient(35deg, #eb0000, #eb0000);
+      box-shadow: 0 2px 20px #26A8;
+    }
+
+    .card-social .instagram {
+      background: linear-gradient(35deg, #45F, #F11);
+      box-shadow: 0 2px 20px #B449;
+    }
+
+    .card-social .facebook {
+      background: linear-gradient(35deg, #0043e0, #0043e0);
+      box-shadow: 0 2px 20px #3449;
+    }
+
+    .card-social .tiktok {
+      background: linear-gradient(35deg, #010101, #ee1d52, #69c9d0);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    a:hover {
+      transform: scale(1.2);
+    }
+
+    .card-button {
+      margin-top: 40px;
+    }
+
+    .mb-4 {
+      margin-bottom: 1.5rem;
+      /* You can adjust the margin as needed */
+      /* Menambahkan efek teks 3D */
+      text-transform: uppercase;
+      text-shadow: 1px 1px 2px #fff;
+      /* Menambahkan bayangan (shadow) */
+      /* Menggunakan font Gothic */
+      font-family: "bold", Gothic;
+      /* Ganti 'Nama-Font-Gothic' dengan nama yang sesuai */
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .h5-shadow {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      /* Adjust the values for the desired 3D shadow effect */
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-control {
+      border-radius: 10px;
+      /* Adjust the border-radius as needed */
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* Optional: Add padding to the input field for better aesthetics */
+    .form-control {
+      padding: 0.5rem;
+    }
   </style>
+</head>
 
-  
-    <div id="content">
-        <h1>Hello, PWA!</h1>
-        <p>This is a simple Progressive Web App.</p>
+<body>
+  <br>
+
+  <style>
+    .marquee-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #222;
+      width: 100%;
+      height: 40px;
+      padding: 10px;
+      overflow: hidden;
+      border: 2px solid #D2B48C;
+      border-radius: 10px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+    }
+
+    .logo-container img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+      animation: spin 5s linear infinite;
+      transition: transform 0.3s;
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.4);
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .marquee-text {
+      font-size: 17px;
+      font-weight: bold;
+      color: #fff;
+      width: calc(100% - 70px);
+      padding: 0 10px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      background-color: #000;
+      position: absolute;
+      top: 50%;
+      left: 60px;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .scrolling-text {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll-left 110s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(80%);
+      }
+
+      80% {
+        transform: translateX(-80%);
+      }
+    }
+  </style>
+  <div class="marquee-container">
+    <div class="logo-container">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczO8WqJJ0DYZd4iHrFmN2X6Vk65inOAGZHvJNAdBDJniFintSXsyaYLNb4ovvc14Z4LijguNoU5T9yGT84W0CRUWAwubH-41jxqlGKwC5kwTL2Xl6x9aTu7Uc5H-Uv5QL6XsnUOC-jHpAQ_SVUsXzJn27Q=w607-h607-s-no-gm?authuser=0" alt="Logo">
     </div>
+    <div class="marquee-text">
+      <div class="scrolling-text" id="scrollingText">
+        Loading data...
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Ambil data dari Google Apps Script
+    google.script.run
+      .withSuccessHandler(displayMarquee)
+      .getSpreadsheetData();
+
+    function displayMarquee(data) {
+      if (!data || data.length === 0) {
+        document.getElementById("scrollingText").textContent = "No data available.";
+        return;
+      }
+      // Format data menjadi teks scrolling dengan pembatas ***
+      const text = data.map(item => {
+        // Menambahkan teks ", ketujuan" setelah data di kolom D
+        const extra2WithText = `${item.extra2}, Ketujuan`;
+        return `${item.title} ${item.description} ${item.extra1} ${extra2WithText}`;
+      }).join(" ---->>> ");
+      document.getElementById("scrollingText").innerHTML = text;
+    }
+  </script>
+
+  <1--- Akhir Kode Marque --->
+
+    <!-- Kode penghitung -->
+    <div id="visitorCounter">
+      Memuat...
+    </div>
+
+    <style>
+      /* CSS untuk posisi dan gaya penghitung pengunjung */
+      #visitorCounter {
+        position: fixed;
+        bottom: 10px;
+        /* Jarak dari bawah */
+        right: 10px;
+        /* Jarak dari kanan */
+        background-color: rgba(255, 255, 255, 0.8);
+        /* Background semi-transparan */
+        color: #007BFF;
+        /* Warna teks biru */
+        font-size: 16px;
+        /* Ukuran teks */
+        font-weight: bold;
+        /* Teks tebal */
+        border: 2px solid transparent;
+        /* Border transparan awal */
+        padding: 10px 15px;
+        /* Padding di dalam elemen */
+        border-radius: 8px;
+        /* Sudut melengkung */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        /* Bayangan */
+        z-index: 1000;
+        /* Agar berada di atas elemen lainnya */
+        font-family: Arial, sans-serif;
+        /* Font standar */
+        max-width: 90%;
+        /* Membatasi ukuran elemen agar tidak terlalu besar */
+        word-wrap: break-word;
+        /* Membungkus teks jika panjang */
+        text-align: center;
+        /* Menengahkan teks */
+        background-clip: padding-box;
+        animation: glow-border 2s linear infinite;
+        /* Animasi untuk border */
+      }
+
+      /* Animasi mengkilap berjalan pada border */
+      @keyframes glow-border {
+        0% {
+          border-color: #007BFF;
+          box-shadow: 0 0 5px #007BFF;
+        }
+
+        50% {
+          border-color: #00FFD1;
+          box-shadow: 0 0 15px #00FFD1;
+        }
+
+        100% {
+          border-color: #007BFF;
+          box-shadow: 0 0 5px #007BFF;
+        }
+      }
+
+      /* Responsif untuk layar kecil (ponsel) */
+      @media (max-width: 768px) {
+        #visitorCounter {
+          font-size: 14px;
+          /* Ukuran teks lebih kecil */
+          padding: 8px 12px;
+          /* Padding lebih kecil */
+        }
+      }
+    </style>
+
+    <script>
+      // Mengambil jumlah pengunjung dari server
+      google.script.run
+        .withSuccessHandler(function(count) {
+          document.getElementById('visitorCounter').textContent =
+            `kunjungan: ${count}`;
+        })
+        .incrementVisitorCount();
+    </script>
+
+    </div>
+    <div class="container-fluid mt-3">
+      <center>
+        <style>
+          .container {
+            position: relative;
+            width: 400px;
+            /* Sesuaikan lebar container sesuai kebutuhan */
+            height: 400px;
+            /* Sesuaikan tinggi container sesuai kebutuhan */
+            margin: 0 auto;
+            /* Mengatur container ke tengah secara horizontal */
+            text-align: center;
+            /* Mengatur konten di dalam container ke tengah secara horizontal */
+          }
+
+          .image1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            /* Mengatur gambar pertama menjadi setengah dari lebar container */
+          }
+
+          .image2 {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            /* Mengatur gambar kedua di tengah secara horizontal */
+            transform: translateX(-50%);
+            /* Mengatur gambar kedua ke tengah secara horizontal */
+            width: 50%;
+            /* Mengatur gambar kedua menjadi setengah dari lebar container */
+          }
+        </style>
+        </head>
+
+        <body>
+          <center>
+            <div class="wrapper">
+              <div class="bg"> Device Hmsi </div>
+              <div class="fg"> Device Hmsi </div>
+            </div>
+    </div>
+    <!-- awal Kode rss -->
+    <center>
+      <style>
+        .news-container {
+          width: 90%;
+          max-width: 800px;
+          height: 10px;
+          /* Tinggi border diatur */
+          border: 1px solid #007bff;
+          border-radius: 10px;
+          padding: 20px;
+          background-color: tranparant;
+          box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+          display: flex;
+          justify-content: center;
+          /* Horizontal center */
+          align-items: center;
+          /* Vertical center */
+          overflow: hidden;
+        }
+
+        marquee {
+          font-size: 17px;
+          font-weight: bold;
+          /* Menambahkan gaya bold */
+          font-style: italic;
+          /* Gaya miring */
+          color: #fff;
+          white-space: nowrap;
+          width: 100%;
+          /* Memastikan teks berjalan sepanjang kontainer */
+          text-align: center;
+          /* Text di dalam marquee center */
+        }
+      </style>
+      <div class="news-container">
+        <marquee behavior="scroll" direction="left">
+          <?= titles ?>
+        </marquee>
+      </div>
+    </center>
+    <br>
+    <!-- akhir Kode rss -->
+
+    <!-- awal Kode popup -->
+
+    <title>Deteksi GPS</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .popup {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .popup-content {
+        background-color: black;
+        color: white;
+        margin: auto;
+        padding: 20px;
+        border: 5px solid #888;
+        width: 80%;
+        max-width: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        border-radius: 15px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+      }
+
+      @keyframes flip-flop {
+
+        0%,
+        100% {
+          opacity: 1;
+        }
+
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .flipping-text {
+        color: red;
+        animation: flip-flop 0.8s infinite;
+      }
+
+      #device-info p {
+        text-align: left;
+        margin: 5px 0;
+        font-size: 14px;
+      }
+
+      #device-info p strong {
+        display: inline-block;
+        width: 120px;
+      }
+    </style>
+
+    <body>
+      <div id="gps-popup" class="popup">
+        <div class="popup-content">
+          <h2>CHEK KEAMANAN</h2>
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczOt-WZnPKuWsYSiwSeYaoeIaLlb1XsjDye21c4dQcxQmO2piQ9WZHR0C0muJUZBE09YRCw_qtIA-WR4c_Y1-cyf8xNe_d1ARQ3oLgdzagFEdUncSI-DjhxgHw5WHE-w8frONgGBL-ZEjZflSsxN3o3UcA=w607-h607-s-no-gm?authuser=0" alt="GPS Tidak Aktif" />
+          <h4 class="flipping-text">Aktifkan GPS anda..!!!</h4>
+          <div id="device-info"></div>
+        </div>
+      </div>
+      <script>
+        function checkGPS() {
+          if (!navigator.geolocation) {
+            alert("Browser ini tidak mendukung Geolocation.");
+            showPopup();
+            return;
+          }
+          navigator.geolocation.getCurrentPosition(
+            function(position) {
+              console.log("GPS aktif:", position);
+              closePopup();
+            },
+            function(error) {
+              console.log("Error obtaining location:", error);
+              if (error.code === error.PERMISSION_DENIED || error.code === error.POSITION_UNAVAILABLE) {
+                showPopup();
+              }
+            }
+          );
+        }
+
+        function showPopup() {
+          document.getElementById("gps-popup").style.display = "block";
+          displayDeviceInfo();
+          playSound(); // Play sound when popup is shown
+        }
+
+        function closePopup() {
+          document.getElementById("gps-popup").style.display = "none";
+        }
+
+        function displayDeviceInfo() {
+          const screenInfo = getScreenInfo();
+          const batteryInfoPromise = getBatteryStatus();
+          const osBrowserInfo = parseUserAgent();
+          const networkInfo = getNetworkInfo();
+          batteryInfoPromise.then(batteryInfo => {
+            const deviceInfo = `
+          <h4>Info hp anda:</h4>
+          <p><strong>Layar:</strong> ${screenInfo}</p>
+          <p><strong>Baterai:</strong> ${batteryInfo.level}</p>
+          <p><strong>Charging:</strong> ${batteryInfo.charging}</p>
+          <p><strong>Jenis:</strong> ${osBrowserInfo.os}</p>
+          <p><strong>Browser:</strong> ${osBrowserInfo.browser}</p>
+          <p><strong>Jaringan:</strong> ${networkInfo}</p>
+        `;
+            document.getElementById("device-info").innerHTML = deviceInfo;
+          });
+        }
+
+        function playSound() {
+          const sound = document.getElementById("popup-sound");
+          sound.play(); // Play the sound
+        }
+
+        function getScreenInfo() {
+          const width = window.screen.width;
+          const height = window.screen.height;
+          return `${width} x ${height}`;
+        }
+
+        function getBatteryStatus() {
+          if (navigator.getBattery) {
+            return navigator.getBattery().then(battery => {
+              return {
+                level: `${battery.level * 100}%`,
+                charging: battery.charging ? 'Ya' : 'Tidak'
+              };
+            });
+          }
+          return Promise.resolve({
+            level: "Tidak Tersedia",
+            charging: "Tidak Tersedia"
+          });
+        }
+
+        function parseUserAgent() {
+          const userAgent = navigator.userAgent;
+          let os = "Tidak diketahui";
+          let browser = "Tidak diketahui";
+          if (/Windows/i.test(userAgent)) os = "Windows";
+          else if (/Mac/i.test(userAgent)) os = "MacOS";
+          else if (/iPhone/i.test(userAgent)) os = "iOS";
+          else if (/Android/i.test(userAgent)) os = "Android";
+          if (/Chrome/i.test(userAgent)) browser = "Chrome";
+          else if (/Firefox/i.test(userAgent)) browser = "Firefox";
+          else if (/Safari/i.test(userAgent)) browser = "Safari";
+          return {
+            os,
+            browser
+          };
+        }
+
+        function getNetworkInfo() {
+          const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+          let networkType = "Tidak Tersedia";
+          let networkName = "Wi-fi Gratis";
+          if (connection) {
+            if (connection.type === 'wifi') {
+              networkType = 'Atm Expedisi';
+            } else if (connection.type === 'cellular') {
+              networkType = 'Seluler';
+              networkName = connection.effectiveType || "Tidak diketahui"; // Using effectiveType if available
+            }
+          }
+          return `${networkType} ${networkName ? '(' + networkName + ')' : ''}`;
+        }
+        setInterval(checkGPS, 1000);
+        window.onload = function() {
+          checkGPS();
+        };
+      </script>
+    </body>
+    <!-- akhir Kode popup -->
+
+    <link rel="stylesheet" href="style.css">
+    <title>Menu 3D</title>
+
+    <style>
+      .open-page-btn {
+        display: inline-block;
+        margin: 10px;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: bold;
+        width: 90px;
+        height: 40px;
+        line-height: 40px;
+        transform: perspective(500px);
+        cursor: pointer;
+        color: transparent;
+        align-items: center;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .open-page-btn:before,
+      .open-page-btn:after {
+        content: attr(text);
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #24c9c9;
+        position: absolute;
+        top: -9px;
+        left: -5px;
+        transition: 0.4s all;
+        color: #24c9c9;
+        border-radius: 15px;
+        text-align: center;
+      }
+
+      .open-page-btn:before {
+        transform: perspective(500px) rotateX(0) translateY(0);
+        transform-origin: 50% 0;
+      }
+
+      .open-page-btn:after {
+        transform: perspective(500px) rotateX(-90deg) translateY(100%);
+        transform-origin: 50% 100%;
+        background: red;
+        color: white;
+      }
+
+      .open-page-btn:hover:before {
+        transform: perspective(500px) rotateX(90deg) translateY(-100%);
+      }
+
+      .open-page-btn:hover:after {
+        transform: perspective(500px) rotateX(0) translateY(0);
+      }
+
+      .open-page-btn:before,
+      .open-page-btn:after {
+        top: -7px;
+        left: -3px;
+      }
+
+      /* Modal styles */
+      .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        z-index: 1000;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Black background with opacity */
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        /* Adjust margins for mobile screens */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 90%;
+        /* Full width on mobile screens */
+        max-width: 600px;
+        /* Limit width on larger screens */
+        height: auto;
+        max-height: 80vh;
+        /* Prevent modal from becoming too tall */
+        overflow-y: auto;
+        /* Enable scrolling inside the modal if content overflows */
+      }
+
+      .close {
+        color: red;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      iframe {
+        width: 100%;
+        /* Make iframe responsive */
+        height: 70vh;
+        /* Adjust height based on screen */
+        border: none;
+      }
+
+      /* Media Queries for smaller screens */
+      @media screen and (max-width: 600px) {
+        .modal-content {
+          width: 100%;
+          /* Full width on small screens */
+          height: auto;
+        }
+      }
+    </style>
+
+    <body>
+      <center>
+        <a class="nav-link open-page-btn" href="#" text="Antrian" data-url="https://script.google.com/macros/s/AKfycbzOqwr4OW4-k56hk4YTCDHP0_xRi3qepHNvhPSGmMOKynvL8Pu1rJDbSpBBKMKQdMFl0A/exec">
+          Antrian
+        </a>
+        <a class="nav-link open-page-btn" href="#" text="Gps" data-url="https://script.google.com/macros/s/AKfycbxS1qUHKRNAdAs_a2ftnQt0XrV0LYK9dpivD0BWJAIJMgdvjXB98JtrfHWl-Gcdx82Z/exec">
+          Gps
+        </a>
+        <a class="nav-link open-page-btn" href="#" text="BBM" data-url="https://script.google.com/macros/s/AKfycbxMdHTF8UvM-16E42KhJ0laChdCEEp6pe66j6VA8dG3dGoDQmOhtdxqj36uR_PxDk1T/exec">
+          BBM
+        </a>
+        <a class="nav-link open-page-btn" href="#" text="UJ" data-url="https://script.google.com/macros/s/AKfycbxkH1_BS4Wzh_AAixmIOsxQJv4PVscLH1p5PHLZs_k-Nct9wNzIX4StQyVndUHAR_n2Rg/exec">
+          UJ
+        </a>
+        <a class="nav-link open-page-btn" href="#" text="Religi" data-url="https://script.google.com/macros/s/AKfycbyuBEo7FpYDH3AobW4ZpyYNgXU33CmSEfs0LvwbXDimY1vfAz8S7HlgDeYT2qf1pIUPxA/exec">
+          Tools
+        </a>
+        <a class="nav-link open-page-btn" href="#" text="Biodata" data-url="https://script.google.com/macros/s/AKfycbxGAJ9IcL3-tBfBK-OgwBOUn9_inJSPpUvkwKLl7H-Z_4ggOBkt5spiWBu_WdrQxvxk/exec">
+          Biodata
+        </a>
+      </center>
+
+      <!-- Modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <iframe id="popup-iframe" src="" width="100%" height="500px" frameborder="0"></iframe>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const buttons = document.querySelectorAll('.open-page-btn');
+          const modal = document.getElementById('myModal');
+          const iframe = document.getElementById('popup-iframe');
+          const span = document.getElementsByClassName('close')[0];
+          // When the user clicks on the button, open the modal and load the URL in the iframe
+          buttons.forEach(button => {
+            button.addEventListener('click', function(event) {
+              event.preventDefault();
+              const url = button.getAttribute('data-url');
+              iframe.src = url;
+              modal.style.display = 'block';
+            });
+          });
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+            modal.style.display = 'none';
+            iframe.src = ''; // Clear the iframe when closing
+          };
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = 'none';
+              iframe.src = ''; // Clear the iframe when closing
+            }
+          };
+        });
+      </script>
+      <!-- Batas Kode tombol -->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="designs.js"></script>
+    </body>
+
+    <div class="row frame">
+      <div class="col">
+        <!-- ## SEARCH FORM ------------------------------------------------ -->
+        <form id="search-form" onsubmit="handleFormSubmit(this)">
+          <div class="form-group mb-2">
+            <h4 class="mb-4 text-center" for="searchtext">Database Device Hmsi</h4>
+          </div>
+          <p>
+          <div class="form-group mx-sm-3 mb-3">
+            <input type="text" class="form-control text-center col-sm-12" id="searchtext" name="searchtext" placeholder="Ketik Disini..."><br>
+
+            <input type="text" class="form-control col-sm-12" id="searchtext2" name="searchtext2" placeholder="text" style="display:none">
+          </div>
+
+          <center>
+            <button type="submit" class="btn btn-success">Cari Data</button>
+            <span id="resp-spinner5" class="spinner-grow spinner-grow-sm text-danger d-none" role="status" aria-hidden="true"></span>
+            <span id="resp-spinner6" class="spinner-grow spinner-grow-sm text-warning d-none" role="status" aria-hidden="true"></span>
+            <span id="resp-spinner7" class="spinner-grow spinner-grow-sm text-info d-none" role="status" aria-hidden="true"></span>
+          </center>
+        </form>
+        <!-- ## SEARCH FORM ~ END ------------------------------------------- -->
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div id="search-results" class="table-responsive">
+        </div>
+      </div>
+    </div>
+    </div>
+    <center>
+
+      <!-- Awal Kode Mp3 -->
+      <style>
+        #playButton {
+          font-size: 14px;
+          padding: 10px 50px;
+          background: linear-gradient(145deg, #ff6f91, #ff9671);
+          color: white;
+          border: none;
+          border-radius: 50px;
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3), inset 0px -2px 6px rgba(255, 255, 255, 0.5);
+          transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.5s ease;
+          cursor: pointer;
+        }
+
+        #playButton:hover {
+          transform: translateY(-3px);
+          box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4), inset 0px -2px 8px rgba(255, 255, 255, 0.5);
+        }
+
+        #playButton:active {
+          transform: translateY(2px);
+          box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #playButton.hidden {
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        audio {
+          display: none;
+        }
+      </style>
+
+      <button id="playButton">▶️ Play Audio</button>
+      <audio id="audioPlayer">
+        <!-- Sumber audio akan diatur dinamis menggunakan JavaScript -->
+        Your browser does not support the audio element.
+      </audio>
+
+      <script>
+        // Daftar file audio MP3
+        const audioFiles = [
+          "https://ia801402.us.archive.org/9/items/shalawat-burdah-penyembuh-penyakit/Shalawat%20burdah%20penyembuh%20penyakit.mp3",
+          "https://ia804506.us.archive.org/14/items/asyghil-versi-fitriana-kamila/Asyghil%20versi%20Fitriana%20Kamila.mp3",
+          "https://ia600608.us.archive.org/25/items/alfa-sholallah/Alfa%20Sholallah%20-.mp3",
+          "https://ia902302.us.archive.org/1/items/19.-kisah-sang-rosul-inema/18.%20Astaghfirullah%20-%20NancyDAUN.mp3",
+        ];
+        document.getElementById('playButton').addEventListener('click', function() {
+          const audio = document.getElementById('audioPlayer');
+          const button = this;
+          // Pilih file audio secara acak
+          const randomIndex = Math.floor(Math.random() * audioFiles.length);
+          audio.src = audioFiles[randomIndex];
+          // Putar audio
+          audio.play();
+          // Sembunyikan tombol dengan animasi
+          button.classList.add('hidden');
+          // Hapus elemen tombol sepenuhnya dari DOM setelah animasi selesai
+          setTimeout(() => {
+            button.remove();
+          }, 500); // Waktu sama dengan durasi `opacity` di CSS
+        });
+      </script>
+      <!-- Batas Kode Mp3 -->
+
+      <div class="card-social">
+        <a href="javascript:childWindow('https://www.youtube.com/@sdedyatm')" class="youtube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://web.facebook.com/sdedyatm" target="_blank" class="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://x.com/i/lists/1342338080611524609" target="_blank" class="xcom">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/sdedy.atm/" target="_blank" class="instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@atmexpedisi" target="_blank" class="tiktok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </center>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <!--##JAVASCRIPT FUNCTIONS ---------------------------------------------------- -->
+
+    <script>
+      function preventFormSubmit() {
+        var forms = document.querySelectorAll('form');
+        for (var i = 0; i < forms.length; i++) {
+          forms[i].addEventListener('submit', function(event) {
+            event.preventDefault();
+          });
+        }
+      }
+      window.addEventListener("load", preventFormSubmit, true);
+      //HANDLE FORM SUBMISSION
+      function handleFormSubmit(formObject) {
+        //  if(document.getElementById('searchtext').value == "" || document.getElementById('searchtext2').value == ""){
+        if (document.getElementById('searchtext').value == "") {
+          alert("SILAHKAN KETIK DATA DAHULU..!!");
+        } else {
+          document.getElementById('resp-spinner5').classList.remove("d-none");
+          document.getElementById('resp-spinner6').classList.remove("d-none");
+          document.getElementById('resp-spinner7').classList.remove("d-none");
+          google.script.run.withSuccessHandler(createTable).processForm(formObject);
+          document.getElementById("search-form").reset();
+        };
+      };
+      //CREATE THE DATA TABLE
+      function createTable(dataArray) {
+        document.getElementById('resp-spinner5').classList.add("d-none");
+        document.getElementById('resp-spinner6').classList.add("d-none");
+        document.getElementById('resp-spinner7').classList.add("d-none");
+        if (dataArray && dataArray !== undefined && dataArray.length != 0) {
+          var result = "<table border='1' class='table table-sm thead-dark' id='dtable' style='font-size:0.8em'>" +
+            "<thead style='white-space: nowrap'>" +
+            "<tr>" +
+            "<th style='background-color: #FFFAFA;text-align:center'>NO</th>" +
+            "<th style='background-color: #27e861;text-align:center'>TGL</th>" +
+            "<th style='background-color: #D2691E;text-align:center'>DRIVERS</th>" +
+            "<th style='background-color: #10ebe7;text-align:center'>NOPOL</th>" +
+            "<th style='background-color: #FF69B4;text-align:center'>NOKA</th>" +
+            "<th style='background-color: #fa0702;text-align:center'>NOSIN</th>" +
+            "<th style='background-color: #eefa02;text-align:center'>TYPE UNIT</th>" +
+            "<th style='background-color: #10ebe7;text-align:center'>TUJUAN</th>" +
+            "<th style='background-color: #00FF7F;text-align:center'>UANG JALAN</th>" +
+            "<th style='background-color: #02b0fa;text-align:center'>VENDOR</th>" +
+            "<th style='background-color: #fca4a4;text-align:center'>ASAL UNIT</th>" +
+            "<th style='background-color: #FFA500;text-align:center'>WARNA</th>" +
+            "<th style='background-color: #929596;text-align:center'>CODE BOT</th>" +
+            "<th style='background-color: #79fa02;text-align:center'>PRIORITAS</th>" +
+            "<th style='background-color: #a302fa;text-align:center'>KETERANGAN</th>" +
+            "</tr>" +
+            "</thead>";
+          for (var i = 0; i < dataArray.length; i++) {
+            result += "<tr style='text-align:center;font-weight:bold; background-color: #000; color: #7febe2;'>";
+            for (var j = 0; j < dataArray[i].length; j++) {
+              result += "<td style='border: 1px solid #fff;'>" + dataArray[i][j] + "</td>";
+            }
+            result += "</tr>";
+          }
+          result += "</table>";
+          var div = document.getElementById('search-results');
+          div.innerHTML = result;
+        } else {
+          var div = document.getElementById('search-results');
+          div.innerHTML = "Data tidak ditemukan....";
+          div.style.color = "red"; // Set the text color to white
+          div.style.display = "flex";
+          div.style.justifyContent = "center"; // Center horizontally
+          div.style.alignItems = "center"; // Center vertically
+        }
+      }
+
+      function childWindow(URL) {
+        window.open(URL, "ventana1", "width=1200,height=900,scrollbars=YES")
+      }
+
+      function actualizeDiv(html, button) {
+        var div = document.getElementById('results');
+        div.innerHTML = html;
+      }
+      data.sort(function(a, b) {
+        return a.id - b.id;
+      });
+    </script>
+      <style>
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+
+        .download-btn {
+          padding: 12px 24px;
+          font-size: 16px;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: #fff;
+          background: linear-gradient(to right, #40a7fc, #056cc0);
+          border: none;
+          border-radius: 8px;
+          margin: 8px 24px;
+          box-shadow: 0 6px 20px -8px rgba(0, 0, 0, 0.5);
+          cursor: pointer;
+          transition: all 500ms ease;
+        }
+
+        .download-btn:hover {
+          transform: translateY(-4px);
+        }
+      </style>
+
+      <div class="container">
+        <button class="download-btn">Simpan / print</button>
+      </div>
+
+      <!-- 
+
+    <a class='download-btn' href="https://restpack.io/html2pdf/save-as-pdf" target="_blank">Save this page as PDF</a>
+    <script async src="https://restpack.io/save-as-pdf.js"></script>
+
+     -->
+
+      <script>
+        const downloadBtn = document.querySelector(".download-btn");
+        downloadBtn.addEventListener("click", () => {
+          window.print();
+        });
+      </script>
+      <script src="main.js"></script>
+    </center>
+    <!-- Batas Kode spreadsheet -->
     <script src="/script.js"></script>
 </body>
 </html>
